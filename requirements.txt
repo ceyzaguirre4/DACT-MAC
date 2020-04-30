@@ -1,0 +1,10 @@
+h5py
+nltk
+numpy
+Pillow
+torch
+torchvision
+tqdm
+yacs
+comet_ml
+gensim

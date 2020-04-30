@@ -1,0 +1,58 @@
+MAC:
+  # DIM: 512
+  # EMBD_DIM: 300
+  KNOW_DIM: 1024
+  # ENC_INPUT_DROPOUT: 0.15
+  # STEM_DROPOUT: 0.18
+  # QUESTION_DROPOUT: 0.08
+  # MEM_DROPOUT: 0.15
+  # READ_DROPOUT: 0.15
+  # OUTPUT_DROPOUT: 0.15
+  # SELF_ATT: False
+  # MEMORY_GATE: False
+  MEMORY_GATE_BIAS: 0.0
+  USE_ACT: True
+  # INIT_CNTRL_AS_Q: True
+  # MEMORY_VAR_DROPOUT: True
+
+ACT:
+#   MAX_ITER: 12
+  SMOOTH: False
+  HALT_TRAIN: True
+#   HALT_TEST: True
+#   PENALTY_TYPE: "unit"
+#   EXP_PENALTY_PHASE: 7
+#   LINEAR_PENALTY_PHASE: 5
+  PENALTY_COEF: 0.001
+  MIN_PENALTY: 0.0
+#   BASELINE: CN()
+#   BASELINE.EPSILON: 0.01
+
+# INPUT:
+#   N_VOCAB: 90
+
+# OUTPUT:
+#   DIM: 28
+
+# DATALOADER:
+#   NUM_WORKERS: 4
+#   BATCH_SIZE: 64
+#   FEATURES_PATH: "/home/cristobal/datasets/CLEVR_v1.0"
+
+SOLVER:
+  EPOCHS: 30
+#   LR: 0.0001
+#   GATE_LR: 0.0
+#   GRAD_CLIP: 8
+#   USE_SCHEDULER: True
+
+SAVE_PATH: 'checkpoint/graves-0001'
+# SAVE_ATTENTIONS: False
+LOAD: True
+LOAD_PATH: "checkpoint/mac_12_10.model"
+# DEVICE: "cuda"
+
+# comet logger params
+COMET:
+  EXPERIMENT_NAME: "GRAVES 1e-3"
+  PROJECT_NAME: "mac-clevr'
