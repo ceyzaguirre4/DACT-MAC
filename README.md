@@ -106,3 +106,16 @@ python3 train.py --mode=gqa --config-file=configs/GQA/MAC/mac12.yaml DATALOADER.
 # train DACT
 python3 train.py --mode=gqa --config-file=configs/GQA/DACT/ours_0005.yaml DATALOADER.FEATURES_PATH [GQA directory]
 ~~~
+
+
+## Cite
+
+~~~
+@InProceedings{Eyzaguirre_2020_CVPR,
+  author = {Eyzaguirre, Cristobal and Soto, Alvaro},
+  title = {Differentiable Adaptive Computation Time for Visual Reasoning},
+  booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month = {June},
+  year = {2020}
+}
+~~~
