@@ -10,6 +10,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 from transforms import Scale
+from utils import collate_data, collate_data_GQA
 
 
 def get_dataloader(cfg, mode="clevr"):

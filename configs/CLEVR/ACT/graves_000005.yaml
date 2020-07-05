@@ -55,4 +55,4 @@ LOAD_PATH: "checkpoint/mac_12_10.model"
 # comet logger params
 COMET:
   EXPERIMENT_NAME: "GRAVES 5e-5"
-  PROJECT_NAME: "mac-clevr'
+  PROJECT_NAME: "mac-clevr"
