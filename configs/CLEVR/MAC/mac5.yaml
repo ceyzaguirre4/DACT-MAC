@@ -55,4 +55,4 @@ SAVE_PATH: 'checkpoint/mac_5'
 # comet logger params
 COMET:
   EXPERIMENT_NAME: "MAC 5"
-  PROJECT_NAME: "mac-clevr'
+  PROJECT_NAME: "mac-clevr"

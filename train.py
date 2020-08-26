@@ -12,15 +12,13 @@ from torch import nn
 from torch import optim
 
 from dataset import get_dataloader
-from utils import collate_data, collate_data_GQA, load_pretrained_embedings
+from utils import load_pretrained_embedings
 from model import MACNetwork
 from config import get_default_cfg, config_to_comet
 
 ON_SLURM = "SLURM_JOBID" in os.environ
 
-device = torch.device(cfg.DEVICE if torch.cuda.is_available() else "cpu")
-print("using {}".format(device))
-
+device = None
 
 def accumulate(model1, model2, decay=0.999):
     par1 = dict(model1.named_parameters())
@@ -161,6 +159,8 @@ def generate_cfg():
 
 if __name__ == '__main__':
     cfg, mode = generate_cfg()
+    device = torch.device(cfg.DEVICE if torch.cuda.is_available() else "cpu")
+    print("using {}".format(device))
 
     experiment = Experiment(
         api_key = os.environ["COMET_KEY"],

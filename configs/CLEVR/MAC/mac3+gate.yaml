@@ -55,4 +55,4 @@ LOAD_PATH: "checkpoint/mac_3_10.model"
 # comet logger params
 COMET:
   EXPERIMENT_NAME: "MAC 3+Gate"
-  PROJECT_NAME: "mac-clevr'
+  PROJECT_NAME: "mac-clevr"
